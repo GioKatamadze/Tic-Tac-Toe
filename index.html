@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <!-- Game Start Page -->
+    <div id="startWrapper">
+      <div id="startPage">
+        <div class="starterTopIcons">
+          <img id="imgMargin" src="assets/icon-x.svg" alt="X icon" />
+          <img src="assets/icon-o.svg" alt="O icon" />
+        </div>
+
+        <div class="pickPlayerBox">
+          <h2>PICK PLAYER 1’S MARK</h2>
+
+          <div class="XboxObox">
+            <div id="Xbox">
+              <img id="XboxIcon" src="assets/icon-x.svg" alt="X icon" />
+            </div>
+
+            <div id="Obox">
+              <img id="OboxIcon" src="assets/icon-o.svg" alt="O icon" />
+            </div>
+          </div>
+          <p>REMEMBER : X GOES FIRST</p>
+        </div>
+
+        <div id="newGameCPU">NEW GAME (VS CPU)</div>
+        <div id="newGamePlayer">NEW GAME (VS PLAYER)</div>
+      </div>
+    </div>
+
+    <!-- ALERTS -->
+
+    <!-- CPU_lost_o_wins -->
+    <div id="CPU_lost_o_wins_wrapper">
+      <div id="CPU_lost_o_wins">
+        <div class="alertTitle">
+          <h2>OH NO, YOU LOST…</h2>
+        </div>
+        <div class="roundWinner">
+          <img src="assets/icon-o.svg" alt="O icon" />
+          <h2>TAKES THE ROUND</h2>
+        </div>
+        <div class="alertButtons">
+          <div id="cpuLostOwins_QuitBtn" class="quitBtn">QUIT</div>
+          <div id="cpuLostOwins_NextRoundBtn" class="nextRoundBtn">
+            NEXT ROUND
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CPU_win_x_wins -->
+    <div id="CPU_win_x_wins_wrapper">
+      <div id="CPU_wins_x_wins">
+        <div class="alertTitle">
+          <h2>YOU WON!</h2>
+        </div>
+        <div class="roundWinner">
+          <img src="assets/icon-x.svg" alt="x icon" />
+          <h2 class="xWins">TAKES THE ROUND</h2>
+        </div>
+        <div class="alertButtons">
+          <div id="cpuWinXwins_QuitBtn" class="quitBtn">QUIT</div>
+          <div id="cpuWinXwins_NextRoundBtn" class="nextRoundBtn">
+            NEXT ROUND
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Player vs Player O wins -->
+    <div id="playerVsplayerOwinsWrapper">
+      <div id="Player1_win_o_wins">
+        <div class="alertTitle">
+          <h2 id="oWins">OH NO, YOU LOST…</h2>
+        </div>
+        <div class="roundWinner">
+          <img src="assets/icon-o.svg" alt="o icon" />
+          <h2 class="oWins">TAKES THE ROUND</h2>
+        </div>
+        <div class="alertButtons">
+          <div id="Player1WinOwins_QuitBtn" class="quitBtn">QUIT</div>
+          <div id="Player1WinOwins_NextRoundBtn" class="nextRoundBtn">
+            NEXT ROUND
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Player vs Player X wins -->
+    <div id="playerVsplayerXwinsWrapper">
+      <div id="playerVsplayerXwins">
+        <div class="alertTitle">
+          <h2 id="xWins">YOU WON!</h2>
+        </div>
+        <div class="roundWinner">
+          <img src="assets/icon-x.svg" alt="x icon" />
+          <h2 class="xWins">TAKES THE ROUND</h2>
+        </div>
+        <div class="alertButtons">
+          <div id="Player2WinXwins_QuitBtn" class="quitBtn">QUIT</div>
+          <div id="Player2WinXwins_NextRoundBtn" class="nextRoundBtn">
+            NEXT ROUND
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restart game? -->
+    <div id="restartGameWrapper">
+      <div id="restartGame">
+        <div class="restartTitle">
+          <h2>RESTART GAME?</h2>
+        </div>
+        <div class="restartButtons">
+          <div class="noCancelBtn">NO, CANCEL</div>
+          <div class="yesRestartBtn">YES, RESTART</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Round Tied -->
+    <div id="roundTiedWrapper">
+      <div id="roundTiedGame">
+        <div class="roundTiedTitle">
+          <h2>ROUND TIED</h2>
+        </div>
+        <div class="alertButtons">
+          <div id="tieQuitBtn" class="quitBtn">QUIT</div>
+          <div id="tieRoundBtn" class="nextRoundBtn">NEXT ROUND</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Board -->
+
+    <div id="boardWrapper">
+      <div class="gameBoard">
+        <div class="topSection">
+          <div class="topIcons">
+            <img id="topImgMargin" src="assets/icon-x.svg" alt="X icon" />
+            <img src="assets/icon-o.svg" alt="O icon" />
+          </div>
+          <div id="playerTurn">
+            <img id="turnImg1" src="assets/icon-x.svg" alt="X icon" />
+            <img id="turnImg2" src="assets/icon-o.svg" alt="O icon" />
+            <p>TURN</p>
+          </div>
+          <div id="restartButton">
+            <img src="assets/icon-restart.svg" alt="restart button" />
+          </div>
+        </div>
+
+        <div id="board">
+          <div id="b1" class="box"></div>
+          <div id="b2" class="box"></div>
+          <div id="b3" class="box"></div>
+          <div id="b4" class="box"></div>
+          <div id="b5" class="box"></div>
+          <div id="b6" class="box"></div>
+          <div id="b7" class="box"></div>
+          <div id="b8" class="box"></div>
+          <div id="b9" class="box"></div>
+        </div>
+
+        <div class="resultSection">
+          <div id="xResult">
+            <h2 id="xResultTitle">X</h2>
+            <p id="xResultDigits">10</p>
+          </div>
+          <div id="tieResult">
+            <h2 id="tieResultTitle">TIES</h2>
+            <p id="tieResultDigits">10</p>
+          </div>
+          <div id="oResult">
+            <h2 id="oResultTitle">O</h2>
+            <p id="oResultDigits">10</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
